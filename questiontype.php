@@ -10,7 +10,7 @@ class qtype_multichoice_advance extends question_type {
     public function get_question_options($question) {
         global $DB, $OUTPUT;
 
-        $question->options = $DB->get_record('qtype_multichoice_options', ['questionid' => $question->id]);
+        $question->options = $DB->get_record('qtype_multichoice_advance', ['questionid' => $question->id]);
 
         if ($question->options === false) {
             // If this has happened, then we have a problem.
@@ -123,23 +123,22 @@ class qtype_multichoice_advance extends question_type {
     }
 
     protected function make_question_instance($questiondata) {
+        var_dump("make_question_instance");
         question_bank::load_question_definition_classes($this->name());
-        if ($questiondata->options->single) {
-            $class = 'qtype_multichoice_advance_single_question';
-        } else {
-            $class = 'qtype_multichoice_advance_multi_question';
-        }
+        $class = 'qtype_multichoice_advance';
         return new $class();
     }
 
     protected function initialise_question_instance(question_definition $question, $questiondata) {
+        var_dump("initialise_question_instance");die();
         parent::initialise_question_instance($question, $questiondata);
+
         $question->shuffleanswers = $questiondata->options->shuffleanswers;
         $question->answernumbering = $questiondata->options->answernumbering;
         if (!empty($questiondata->options->layout)) {
             $question->layout = $questiondata->options->layout;
         } else {
-            $question->layout = qtype_multichoice_advance_single_question::LAYOUT_VERTICAL;
+            $question->layout = qtype_multichoice_advance_question::LAYOUT_VERTICAL;
         }
         $this->initialise_combined_feedback($question, $questiondata, true);
 
@@ -147,31 +146,43 @@ class qtype_multichoice_advance extends question_type {
     }
 
     public function make_answer($answer) {
-        var_dump("yo");
+        var_dump("make_answer");die();
+        // Overridden just so we can make it public for use by question.php.
+        return parent::make_answer($answer);
     }
 
     public function delete_question($questionid, $contextid) {
-        var_dump("yo");
+        global $DB;
+        var_dump("delete_question");die();
+        $DB->delete_records('qtype_multichoice_advance', array('questionid' => $questionid));
+
+        parent::delete_question($questionid, $contextid);
     }
 
     public function get_random_guess_score($questiondata) {
-        var_dump("yo");
+        var_dump("get_random_guess_score");die();
     }
 
     public function get_possible_responses($questiondata) {
-        var_dump("yo");
+        var_dump("get_possible_responses");die();
     }
 
 
     public static function get_numbering_styles() {
-        var_dump("yo");
+        var_dump("get_numbering_styles");die();
     }
 
     public function move_files($questionid, $oldcontextid, $newcontextid) {
-        var_dump("yo");
+        parent::move_files($questionid, $oldcontextid, $newcontextid);
+        $this->move_files_in_answers($questionid, $oldcontextid, $newcontextid, true);
+        $this->move_files_in_combined_feedback($questionid, $oldcontextid, $newcontextid);
+        $this->move_files_in_hints($questionid, $oldcontextid, $newcontextid);
     }
 
     protected function delete_files($questionid, $contextid) {
-        var_dump("yo");
+        parent::delete_files($questionid, $contextid);
+        $this->delete_files_in_answers($questionid, $contextid, true);
+        $this->delete_files_in_combined_feedback($questionid, $contextid);
+        $this->delete_files_in_hints($questionid, $contextid);
     }
 }
