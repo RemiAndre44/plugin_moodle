@@ -29,16 +29,16 @@ if ($ADMIN->fulltree) {
         new lang_string('answersingleno', 'qtype_multichoice_advance'),
         new lang_string('answersingleyes', 'qtype_multichoice_advance'),
     );
-    $settings->add(new admin_setting_configselect('qtype_multichoice_advance/answerhowmany',
+    /*$settings->add(new admin_setting_configselect('qtype_multichoice_advance/answerhowmany',
     new lang_string('answerhowmany', 'qtype_multichoice_advance'),
-    new lang_string('answerhowmany_desc', 'qtype_multichoice_advance'), '1', $menu));
+    new lang_string('answerhowmany_desc', 'qtype_multichoice_advance'), '1', $menu));*/
 
     $settings->add(new admin_setting_configcheckbox('qtype_multichoice_advance/shuffleanswers',
     new lang_string('shuffleanswers', 'qtype_multichoice_advance'),
     new lang_string('shuffleanswers_desc', 'qtype_multichoice_advance'), '1'));
 
-    $settings->add(new qtype_multichoice_admin_setting_answernumbering('qtype_multichoice_advance/answernumbering',
+    /*$settings->add(new qtype_multichoice_admin_setting_answernumbering('qtype_multichoice_advance/answernumbering',
     new lang_string('answernumbering', 'qtype_multichoice_advance'),
-    new lang_string('answernumbering_desc', 'qtype_multichoice_advance'), 'abc', null ));
+    new lang_string('answernumbering_desc', 'qtype_multichoice_advance'), 'abc', null ));*/
 
 }

@@ -42,7 +42,7 @@ class qtype_multichoice_advance_admin_setting_answernumbering extends admin_sett
      *
      * @return bool true if loaded, false if error
      */
-    public function load_choices() {
+    /*public function load_choices() {
         global $CFG;
 
         if (is_array($this->choices)) {
@@ -50,8 +50,8 @@ class qtype_multichoice_advance_admin_setting_answernumbering extends admin_sett
         }
 
         require_once($CFG->dirroot . '/question/type/multichoice_advance/questiontype.php');
-        $this->choices = qtype_multichoice_advance::get_numbering_styles();
+        //$this->choices = qtype_multichoice_advance::get_numbering_styles();
 
         return true;
-    }
+    }*/
 }

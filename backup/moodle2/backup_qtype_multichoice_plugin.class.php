@@ -52,11 +52,10 @@ class backup_qtype_multichoice_advance_plugin extends backup_qtype_plugin {
         $this->add_question_question_answers($pluginwrapper);
 
         // Now create the qtype own structures.
-        $multichoice_advance = new backup_nested_element('multichoice_advance', array('id'), array(
-            'layout', 'single', 'shuffleanswers',
-            'correctfeedback', 'correctfeedbackformat',
+        $multichoice_advance = new backup_nested_element('multichoice_advance', array('id'), array('layout', 
+            'shuffleanswers', 'correctfeedback', 'correctfeedbackformat',
             'partiallycorrectfeedback', 'partiallycorrectfeedbackformat',
-            'incorrectfeedback', 'incorrectfeedbackformat', 'answernumbering', 'shownumcorrect'));
+            'incorrectfeedback', 'incorrectfeedbackformat', 'shownumcorrect'));
 
         // Now the own qtype tree.
         $pluginwrapper->add_child($multichoice_advance);

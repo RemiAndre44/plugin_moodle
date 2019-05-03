@@ -18,61 +18,52 @@
  * Strings for component 'qtype_multichoice', language 'en', branch 'MOODLE_20_STABLE'
  *
  * @package    qtype
- * @subpackage multichoice
+ * @subpackage multichoice_advance
  * @copyright  1999 onwards Martin Dougiamas  {@link http://moodle.com}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['answerhowmany'] = 'One or multiple answers?';
-$string['answerhowmany_desc'] = 'Whether the default should be one response (i.e. radio buttons) or multiple responses (i.e. checkboxes).';
-$string['answernumbering'] = 'Number the choices?';
-$string['answernumbering123'] = '1., 2., 3., ...';
-$string['answernumberingabc'] = 'a., b., c., ...';
-$string['answernumberingABCD'] = 'A., B., C., ...';
-$string['answernumberingiii'] = 'i., ii., iii., ...';
-$string['answernumberingIIII'] = 'I., II., III., ...';
-$string['answernumberingnone'] = 'No numbering';
-$string['answernumbering_desc'] = 'The default numbering style.';
-$string['answersingleno'] = 'Multiple answers allowed';
-$string['answersingleyes'] = 'One answer only';
-$string['choiceno'] = 'Choice {$a}';
-$string['choices'] = 'Available choices';
-$string['clozeaid'] = 'Enter missing word';
-$string['correctansweris'] = 'The correct answer is: {$a}';
-$string['correctanswersare'] = 'The correct answers are: {$a}';
-$string['correctfeedback'] = 'For any correct response';
-$string['deletedchoice'] = 'This choice was deleted after the attempt was started.';
-$string['errgradesetanswerblank'] = 'Grade set, but the Answer is blank';
-$string['errfractionsaddwrong'] = 'The positive grades you have chosen do not add up to 100%<br />Instead, they add up to {$a}%';
-$string['errfractionsnomax'] = 'One of the choices should be 100%, so that it is<br />possible to get a full grade for this question.';
+$string['answersingleno'] = 'Plusieurs réponses autorisées';
+$string['choiceno'] = 'Choix {$a}';
+$string['choices'] = 'Choix disponibles';
+$string['clozeaid'] = 'Entrer les mots manquants';
+$string['correctansweris'] = 'La bonne réponse est: {$a}';
+$string['correctanswersare'] = 'Les bonnes réponses sont: {$a}';
+$string['correctfeedback'] = 'Pour toute bonne réponse';
+$string['deletedchoice'] = 'Ce choix a été trouvé après que le questionnaire ait commencé';
+$string['errgradesetanswerblank'] = 'Ensemble de notes, mais la réponse est vide';
 $string['feedback'] = 'Feedback';
-$string['fillouttwochoices'] = 'You must fill out at least two choices. Choices left blank will not be used.';
-$string['fractionsaddwrong'] = 'The positive grades you have chosen do not add up to 100%<br />Instead, they add up to {$a}%<br />Do you want to go back and fix this question?';
-$string['fractionsnomax'] = 'One of the choices should be 100%, so that it is<br />possible to get a full grade for this question.<br />Do you want to go back and fix this question?';
-$string['incorrectfeedback'] = 'For any incorrect response';
-$string['notenoughanswers'] = 'This type of question requires at least {$a} choices';
-$string['overallcorrectfeedback'] = 'Feedback for any correct response';
-$string['overallfeedback'] = 'Overall feedback';
-$string['overallincorrectfeedback'] = 'Feedback for any incorrect response';
-$string['overallpartiallycorrectfeedback'] = 'Feedback for any partially correct response';
-$string['partiallycorrectfeedback'] = 'For any partially correct response';
-$string['pleaseselectananswer'] = 'Please select an answer.';
-$string['pleaseselectatleastoneanswer'] = 'Please select at least one answer.';
-$string['pluginname'] = 'Multiple choice advance';
-$string['pluginname_help'] = 'In response to a question (that may include an image) the respondent chooses from multiple answers. A multiple choice question may have one or multiple correct answers.';
+$string['fillouttwochoices'] = 'Vous devez remplir au moins deux choix. Les choix laissés en blanc ne seront pas utilisés.';
+$string['incorrectfeedback'] = 'Pour toute mauvaise réponse';
+$string['notenoughanswers'] = 'Ce type de question nécessite au moins {$ a} choix';
+$string['overallcorrectfeedback'] = 'Feedback pour toute bonne réponse';
+$string['overallfeedback'] = 'Global feedback';
+$string['overallincorrectfeedback'] = 'Feedback pour toute réponse incorrecte';
+$string['overallpartiallycorrectfeedback'] = 'Feedback pour toute réponse partielle';
+$string['partiallycorrectfeedback'] = 'Pour toute réponse partielle';
+$string['pleaseselectananswer'] = 'Choisissez une réponse';
+$string['pleaseselectatleastoneanswer'] = 'Choisissez au moins une réponse';
+$string['pluginname'] = 'Choix multiple avancé';
+$string['pluginname_help'] = 'En réponse à une question (pouvant inclure une image), le répondant choisit parmi plusieurs réponses. Une question à choix multiples peut avoir une ou plusieurs réponses correctes.';
 $string['pluginname_link'] = 'question/type/multichoice_advance';
-$string['pluginnameadding'] = 'Adding a Multiple choice advance question';
-$string['pluginnameediting'] = 'Editing a Multiple choice advance question';
+$string['pluginnameadding'] = 'Ajouter une question à choix multiple avancé';
+$string['pluginnameediting'] = 'Modifier une question à choix multiple avancé';
 $string['pluginnamesummary'] = 'Allows the selection of a single or multiple responses from a pre-defined list.';
-$string['privacy:metadata'] = 'The Multiple choice question type plugin does not store any personal data.';
-$string['selectmulti'] = 'Select one or more:';
-$string['selectone'] = 'Select one:';
-$string['shuffleanswers'] = 'Shuffle the choices?';
-$string['shuffleanswers_desc'] = 'Whether options should be randomly shuffled for each attempt by default.';
-$string['shuffleanswers_help'] = 'If enabled, the order of the answers is randomly shuffled for each attempt, provided that "Shuffle within questions" in the activity settings is also enabled.';
-$string['singleanswer'] = 'Choose one answer.';
-$string['toomanyselected'] = 'You have selected too many options.';
+$string['privacy:metadata'] = 'Permet de sélectionner une ou plusieurs réponses dans une liste prédéfinie.';
+$string['selectmulti'] = 'Selectionner une ou plus:';
+$string['selectone'] = 'Selectionner une:';
+$string['shuffleanswers'] = 'Mélanger les propositions ?';
+$string['shuffleanswers_desc'] = 'Si les options doivent être mélangées de manière aléatoire pour chaque tentative par défaut.';
+$string['shuffleanswers_help'] = 'Si activé, l\'ordre des réponses est mélangé de manière aléatoire pour chaque tentative, à condition que l\'option "Mélanger les questions" dans les paramètres d\'activité soit également activée.';
+$string['singleanswer'] = 'Choisir une réponse.';
+$string['toomanyselected'] = 'Vous avez selectionné trop d\'options .';
 $string['true'] = 'Vrai';
 $string['false'] = 'Faux';
 $string['dontknow'] = 'Je ne sais pas';
 $string['correctanswer'] = 'Bonne réponse';
+$string['correctanswerfalse'] = 'La bonne réponse est \'Faux\'.';
+$string['correctanswertrue'] = 'La bonne réponse est \'Vrai\'.';
+$string['false'] = 'Faux';
+$string['feedbackfalse'] = 'Feedback pour la réponse \'Faux\'.';
+$string['feedbacktrue'] = 'Feedback pour la réponse \'Vrai\'.';
+$string['pleaseselectananswer'] = 'Selectionner une proposition.';

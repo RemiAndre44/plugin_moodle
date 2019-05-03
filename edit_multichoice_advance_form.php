@@ -11,12 +11,9 @@ defined('MOODLE_INTERNAL') || die();
 class qtype_multichoice_advance_edit_form extends question_edit_form {
 
     protected function definition_inner($mform) {
-
-
-
         //ajour par proposition
         $this->add_per_answer_fields($mform, get_string('choiceno', 'qtype_multichoice_advance', '{no}'),
-            question_bank::fraction_options_full(), max(5, QUESTION_NUMANS_START));
+            question_bank::fraction_options_full(), max(4, QUESTION_NUMANS_START));
 
         $this->add_combined_feedback_fields(true);
 
@@ -57,9 +54,9 @@ class qtype_multichoice_advance_edit_form extends question_edit_form {
         $question = $this->data_preprocessing_combined_feedback($question, true);
 
         if (!empty($question->options)) {
-            $question->single = $question->options->single;
+            //$question->single = $question->options->single;
             $question->shuffleanswers = $question->options->shuffleanswers;
-            $question->answernumbering = $question->options->answernumbering;
+            //$question->answernumbering = $question->options->answernumbering;
         }   
         return $question;
     }
@@ -86,10 +83,10 @@ class qtype_multichoice_advance_edit_form extends question_edit_form {
             $answercount++;
         }
         if ($answercount == 0) {
-            $errors['answer[0]'] = get_string('notenoughanswers', 'qtype_multichoice', 2);
-            $errors['answer[1]'] = get_string('notenoughanswers', 'qtype_multichoice', 2);
+            $errors['answer[0]'] = get_string('notenoughanswers', 'qtype_multichoice_advance', 2);
+            $errors['answer[1]'] = get_string('notenoughanswers', 'qtype_multichoice_advance', 2);
         } else if ($answercount == 1) {
-            $errors['answer[1]'] = get_string('notenoughanswers', 'qtype_multichoice', 2);
+            $errors['answer[1]'] = get_string('notenoughanswers', 'qtype_multichoice_advance', 2);
 
         }
         return $errors;
@@ -106,6 +103,7 @@ class qtype_multichoice_advance_edit_form extends question_edit_form {
      * @return object $question the modified data.
      */
     protected function data_preprocessing_answers_advance($question, $withanswerfiles = false) {
+        //cette fonction me permet d'avoir la valeur enregistrée du dropdown
         if (empty($question->options->answers)) {
             return $question;
         }

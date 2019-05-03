@@ -81,3 +81,8 @@ body#page-question-type-multichoice_advance div[id^=fitem_id_][id*=feedback_] {
     border: 1px solid #bbb;
     border-top: 0;
 }
+
+i.iconSelect{
+    margin: 1rem;
+    font-size: 3em;
+}
